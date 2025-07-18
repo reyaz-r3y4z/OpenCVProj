@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Converter - Transform Your Photos</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+  <div class="floating-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <h1>🎨 AI Image Converter</h1>
+      <p>Transform your photos into stunning grayscale masterpieces</p>
+    </div>
+
+    <div class="upload-section">
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">📸</div>
+        <div class="upload-text">Click to upload or drag & drop your image</div>
+        <div class="upload-hint">Supports JPG, PNG, GIF, WebP • Max 10MB</div>
+        <input type="file" id="imgInput" class="hidden-input" accept="image/*" />
+      </div>
+
+      <button type="button" class="convert-btn" id="convertBtn" disabled>
+        ✨ Convert to Grayscale
+      </button>
+
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Processing your image...</p>
+      </div>
+    </div>
+
+    <div class="results-section" id="resultsSection">
+      <h2 style="text-align: center; color: #333; margin-bottom: 20px;">✨ Transformation Complete!</h2>
+      <div class="image-comparison">
+        <div class="image-container">
+          <h3>📷 Original</h3>
+          <img id="originalImage" alt="Original" />
+        </div>
+        <div class="image-container">
+          <h3>🎨 Grayscale</h3>
+          <img id="resultImage" alt="Grayscale Result" />
+          <button class="download-btn" id="downloadBtn">💾 Download Result</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/app.js"></script>
+</body>
+</html>
